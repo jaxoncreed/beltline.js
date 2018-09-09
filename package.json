@@ -2,7 +2,7 @@
   "name": "beltline",
   "version": "0.0.3",
   "description": "A framework using Dristributed Data Protocol for the Semantic Web",
-  "main": "./lib/index.js",
+  "main": "./lib/BeltlineServer.js",
   "scripts": {
     "clean": "rimraf lib coverage",
     "test": "cross-env BABEL_ENV=commonjs mocha --require babel-core/register --recursive",
@@ -23,11 +23,7 @@
     "url": "git+https://github.com/jaxoncreed/beltline.js.git"
   },
   "keywords": [
-    "boilerplate",
-    "npm",
-    "module",
-    "node",
-    "javascript"
+    "beltline"
   ],
   "author": "Jackson Morgan <jaxoncreed@gmail.com>",
   "license": "MIT",
@@ -53,9 +49,6 @@
   },
   "dependencies": {
     "bluebird": "^3.5.2",
-    "rdfstore": "^0.9.17",
-    "socket.io": "^2.1.1",
-    "socket.io-client": "^2.1.1",
-    "uuid": "^3.3.2"
+    "socket.io": "^2.1.1"
   }
 }

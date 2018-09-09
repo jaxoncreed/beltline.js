@@ -11,7 +11,7 @@ npm install beltline --save
 
 ## Usage
 
-To illustrait the usuage of beltline.js we'll be walking through how to build an application that keeps track of a list of people. An example can be seen at .........
+To illustrait the usuage of beltline.js we'll be walking through how to build an application that keeps track of a list of people. An example can be seen [here](https://github.com/jaxoncreed/beltline-example).
 
 ### 1) Define Publish Methods
 
@@ -66,7 +66,8 @@ Attach your Node.js Server to Beltline by creating a database connection, provid
 server.js
 ```js
 import express from 'express'
-import { BeltlineServer, initDatabase } from 'beltline';
+import BeltlineServer from 'beltline';
+import initDatabase from 'beltline-local-storage-database';
 import personApi from './beltlineMethods/personApi';
 
 const app = express();
@@ -86,7 +87,7 @@ Point the beltline client to your server and initialize it with your custom api.
 
 client.js
 ```js
-import { BeltlineClient } from 'beltline';
+import BeltlineClient from 'beltline-client';
 import personApi from '../../beltlineMethods/personApi';
 
 const beltlineClient = new BeltlineClient('http://localhost:8080');
@@ -113,14 +114,3 @@ peopleActions.js
 ```js
 beltline.call('changeName', { id, newName });
 ```
-
-
-# NOTE: TODO ONCE ON WIFI:
-Install bluebird in beltline.js
-Install socket.io in beltline.js
-Install uuid
-Install socket.io-client
-Install rdfstore
-Insert url for demo into readme
-update example code in readme to correspond with the real code
-publish library
